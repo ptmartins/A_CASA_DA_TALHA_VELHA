@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../images/logo.png';
+---
+
+<section class="section section--hero hero">
+    <div class="hero__wrapper">
+        <div class="hero__logo">
+            <Image src={ Logo } alt="A casa da talha velha logo" />
+        </div>
+        <h1 class="hero__title">A Casa da Talha Velha</h1>
+        <h2 class="hero__subtitle">
+            A Casa da Talha Velha, é uma acolhedora casa de hóspedes, situada no coração do Alentejo, onde o conforto e a tranquilidade se encontram entre vinhedos e tradições. <br> Desfrute do autêntico bem-estar alentejano.
+        </h2>
+    </div>
+</section>
+
+<style>
+    .hero {
+        color: var(--primary-accent);
+    }
+
+    .hero__wrapper {
+        column-gap: 4.5rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, minmax(200px, min-content));
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero__logo {
+        grid-area: 1 / 1 / -1 / 2;
+        text-align: center;
+    }
+
+    .hero__title {
+        align-self: self-end;
+        font-family: "Galada", cursive;
+        font-size: 7rem;
+        font-weight: 400;
+        grid-area: 1 / 2 / 2 / -1;
+        white-space: nowrap;
+    }
+
+    .hero__subtitle {
+        align-self: center;
+        font-style: italic;
+        font-weight: 400;
+        grid-area: 2 / 2 / -1 / -1;
+        opacity: .6;
+        text-align: center;
+    }
+</style>

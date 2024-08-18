@@ -1,0 +1,32 @@
+---
+---
+
+<div class="social">
+    <a href="" class="social__link fab fa-facebook-f" title="Facebook"></a>
+    <a href="" class="social__link fab fa-instagram" title="Instagram"></a>
+    <a href="" class="social__link fab fa-twitter" title="Twitter"></a>
+</div>
+
+<style>
+    .social {
+        display: flex;
+        gap: .75rem;
+    }
+
+    .social__link {
+        border: 2px solid var(--primary-accent);
+        border-radius: var(--border-radius-lg);
+        color: var(--primary-accent);
+        cursor: pointer;
+        display: inline-block;
+        height: 46px;
+        padding: 10px;
+        transition: var(--default-transition);
+        width: 46px;
+
+        &:hover {
+            background-color: var(--primary-accent);
+            color: #fff;
+        }
+    }
+</style>

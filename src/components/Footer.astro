@@ -1,0 +1,28 @@
+---
+import Social from './Social.astro';
+
+var time = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <div class="innerWrapper innerWrapper--footer">
+        <div class="copyright">
+            &copy; A Casa da Talha Velha - { time }
+        </div>
+        <Social />
+    </div>
+</footer>
+
+<style>
+    .footer {
+        color: var(--primary-accent);
+    }
+
+    .innerWrapper--footer {
+        align-items: center;
+        border-block-start: 1px solid var(--primary-accent);
+        display: flex;
+        justify-content: space-between;
+        padding-block: 3rem;
+    }
+</style>

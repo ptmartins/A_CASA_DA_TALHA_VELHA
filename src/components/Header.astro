@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import Logo from '../images/logo.png';
+---
+
+<header class="header">
+    <div class="innerWrapper innerWrapper--header">
+        <a href="/" class="header__logo" title="A Casa da Talha Velha">
+            <Image src={ Logo } alt="Header logo" title="A Casa da Talha Velha" height="80" />
+        </a>
+    </div>
+</header>
+
+<style>
+    .innerWrapper--header {
+        padding-block: 3rem;
+    }
+
+    .header__logo {
+        align-items: flex-end;
+        color: var(--primary-accent);
+        display: flex;
+        font-family: 'Galada', cursive;
+        font-size: 1.8rem;
+        gap: 1.5rem;
+    }
+</style>
